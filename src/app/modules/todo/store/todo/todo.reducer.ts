@@ -48,6 +48,11 @@ export const todoReducer = (state = initialState, action: TodoActions) => {
         } : todo)
       };
 
+    case todoActionsType.load:
+      return {
+        ...action.payload.state
+      };
+
     case todoActionsType.delete:
       return {
         ...state,
